@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Update Ticket</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<script src="js/function.js"></script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js"></script>
+<script type="text/javascript" src="js/validation.js">
+</script>
+</head>
+<body onload="createRequest()">
+<div align="center">
+<h1>Please edit the fields you want to update:</h1>
+<form name="updateticketform" id="updateticketform" method="post" action="http://localhost:8079/TicketingSystem/rest/TicketService/updateticket">
+<table>
+<tr>
+<td>Ticket Id:&nbsp;&nbsp;<input type="text" id="id" name="id" value="" readonly></td>
+<td>Created by:&nbsp;&nbsp;<input type="text" id="Creator" name="Creator" value=""></td>
+</tr>
+<tr><td>Assigned to:&nbsp;&nbsp;<input type="text" id="Assigned_To" name="Assigned_To" value=""></td>
+<td colspan="3">Comments:&nbsp;&nbsp;<textarea rows="5" cols="10" id="Comments" name="Comments"></textarea></td></tr>
+<tr>
+<td>Status:&nbsp;&nbsp;
+<select name="Status" id="Status">
+  <option value="New">New</option>
+  <option value="Open">Open</option>
+  <option value="Closed">Closed</option>
+</select>
+</td>
+<td>Time:&nbsp;&nbsp;<input type="text" name="Previous_Time" id="Previous_Time" readonly></td></tr>
+<tr>
+<td>Customer Name:&nbsp;&nbsp;<input type="text" name="Name" id="Name"></td>
+<td>Customer Contact Number:&nbsp;&nbsp;<input type="text" name="Contact_number" id="Contact_number" ></td>
+</tr>
+<tr>
+<td colspan="2"><input type="hidden" name="Time" id="Time"></td>
+</tr>
+<tr>
+<td colspan="2"><div align="center"><input type="submit" value="Submit" name="update_ticket" id="update_ticket">&nbsp;&nbsp;<input type="button" value="Reset" name="Reset" id="Reset" onclick="reset_fn()">&nbsp;&nbsp;
+&nbsp;&nbsp;<input type="button" value="Home" name="Home" id="Home" onclick="location.href='Welcome.html'"></div></td>
+</tr>
+</table>
+</form>
+</div>
+</body>
+</html>
